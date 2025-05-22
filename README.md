@@ -28,6 +28,8 @@ npm install @mokoco/nullable-guards
 yarn add @mokoco/nullable-guards
 ```
 
+---
+
 ## 🚀 Usage
 
 ### ✅ NullableGuard (Basic)
@@ -52,26 +54,26 @@ function Profile({ user }: { user: User | null }) {
 ```
 
 Output Example:
-When user is **null**:
+When user is `null`:
 
 ```tsx
 <Profile user={null} />
 ```
 
-Render nothing null
+Render nothing `null`
 
 When user is **present**:
 
 ```tsx
-<Profile user={{ name: "Jane", email: "jane@example.com" }} />
+<Profile user={{ name: "SH", email: "SH@example.com" }} />
 ```
 
 Renders:
 
 ```html
 <div>
-  <h2>Jane</h2>
-  <p>jane@example.com</p>
+  <h2>SH</h2>
+  <p>SH@example.com</p>
 </div>
 ```
 
@@ -135,6 +137,8 @@ function Article({ post }: { post: Post }) {
 
 ## 🧪 Testing
 
+This package is tested using `Jest`.
+
 ```bash
 # Run test suite
 npm test
@@ -142,7 +146,7 @@ npm test
 
 ## 📦 Release & Versioning
 
-Managed by Changesets.
+Managed by `Changesets`.
 Versions are automatically bumped and published to npm when merged to main.
 
 ## 📜 Changelog
