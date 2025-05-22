@@ -60,7 +60,8 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --watch",
-    "test": "jest"
+    "test": "jest",
+    "release": "changeset publish"
   },
   "repository": {
     "type": "git",
