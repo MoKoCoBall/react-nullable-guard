@@ -60,7 +60,8 @@ If user has value, it will render the children with user as a non-null value.
 This package is tested using **Jest**.
 
 ```bash
-npm test
+# Run both test suites
+npm test && npm run vitest
 ```
 
 📄 License
