@@ -1,8 +1,7 @@
 # Nullable Guards
 
 [![npm version](https://badge.fury.io/js/@mokoco%2Fnullable-guards.svg)](https://www.npmjs.com/package/@mokoco/nullable-guards)
-[![CI](https://github.com/mokoco/nullable-guards/actions/workflows/build.yml/badge.svg)]
-(https://github.com/mokoco/nullable-guards/actions/workflows/build.yml)
+[![CI](https://github.com/MoKoCoBall/react-nullable-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/MoKoCoBall/react-nullable-guard/actions/workflows/ci.yml)
 
 Safely unwrap `T | null | undefined` in React with declarative guards.  
 No more manual null checks in your components – just wrap and use.
