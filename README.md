@@ -57,11 +57,11 @@ If user has value, it will render the children with user as a non-null value.
 
 🧪 Testing
 
-This package is tested using **Jest** and **Vitest**.
+This package is tested using **Jest**.
 
 ```bash
 # Run both test suites
-npm test && npm run vitest
+npm test
 ```
 
 📄 License
