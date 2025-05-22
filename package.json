@@ -54,13 +54,11 @@
     "ts-jest": "^29.3.4",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.4"
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --watch",
-    "vitest": "vitest",
     "test": "jest"
   },
   "repository": {
