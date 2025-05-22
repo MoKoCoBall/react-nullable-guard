@@ -1,4 +1,4 @@
-name: CI & Publish
+name: CI & Release
 
 on:
   push:
@@ -22,16 +22,36 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run build
         run: npm run build
 
-      - name: Run Jest tests
+      - name: Run tests
         run: npm test
 
-      - name: Publish to npm
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npm publish --access public
+  release:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create release PR or publish
+        uses: changesets/action@v1
+        with:
+          publish: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
