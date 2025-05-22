@@ -1,7 +1,8 @@
 # Nullable Guards
 
 [![npm version](https://badge.fury.io/js/@mokoco%2Fnullable-guards.svg)](https://www.npmjs.com/package/@mokoco/nullable-guards)
-[![CI](https://github.com/mokoco/nullable-guards/actions/workflows/ci.yml/badge.svg)](https://github.com/mokoco/nullable-guards/actions/workflows/ci.yml)
+[![CI](https://github.com/mokoco/nullable-guards/actions/workflows/build.yml/badge.svg)]
+(https://github.com/mokoco/nullable-guards/actions/workflows/build.yml)
 
 Safely unwrap `T | null | undefined` in React with declarative guards.  
 No more manual null checks in your components – just wrap and use.
@@ -77,6 +78,8 @@ Renders:
 </div>
 ```
 
+---
+
 ### ✅ NullableListGuard
 
 ```tsx
@@ -101,6 +104,8 @@ function TaskList({ tasks }: { tasks: Task[] | null }) {
 
 **Only renders when the list is non-null and has at least one item.**
 
+---
+
 ### ✅ NullableObjectGuard
 
 ```tsx
@@ -124,6 +129,8 @@ function Article({ post }: { post: Post }) {
 
 **Only renders when all fields in the object are non-null.**
 
+---
+
 ## 🌿 Props
 
 | Component           | Prop     | Type                       | Description                             |
@@ -135,6 +142,8 @@ function Article({ post }: { post: Post }) {
 | NullableObjectGuard | value    | { [k: string]: any }       | Object with potentially null fields     |
 |                     | children | (value: T) => JSX.Element  | Renders only if all fields are not null |
 
+---
+
 ## 🧪 Testing
 
 This package is tested using `Jest`.
@@ -144,17 +153,23 @@ This package is tested using `Jest`.
 npm test
 ```
 
+---
+
 ## 📦 Release & Versioning
 
 Managed by `Changesets`.
 Versions are automatically bumped and published to npm when merged to main.
+
+---
 
 ## 📜 Changelog
 
 v1.0.0
 Initial release
 
-NullableGuard, NullableListGuard, NullableObjectGuard components
+`NullableGuard`, `NullableListGuard`, `NullableObjectGuard` components
+
+---
 
 ## 📄 License
 
